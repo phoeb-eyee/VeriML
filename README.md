@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VeriML
 
 VeriML is an AI-powered machine learning auditing tool. It investigates whether
@@ -51,3 +52,5 @@ veriml/
 └── audit.py   # the three experiments + metric helpers
 main.py        # entry point: generate -> run experiments -> print + save report
 ```
+
+>>>>>>> origin/main

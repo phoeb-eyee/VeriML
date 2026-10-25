@@ -1,0 +1,60 @@
+[
+  {
+    "name": "baseline",
+    "description": "Train on historical data using ALL features (leak included).",
+    "features": [
+      "income",
+      "credit_score",
+      "leaky_feature"
+    ],
+    "train_rows": 600,
+    "test_rows": 200,
+    "accuracy": 0.995,
+    "precision": 0.9893617021276596,
+    "recall": 1.0,
+    "f1": 0.9946524064171123,
+    "coefficients": {
+      "income": 0.19317484676486663,
+      "credit_score": 0.17686693965235392,
+      "leaky_feature": 4.462592969008931
+    }
+  },
+  {
+    "name": "ablation",
+    "description": "Same data, but the leaky feature is removed.",
+    "features": [
+      "income",
+      "credit_score"
+    ],
+    "train_rows": 600,
+    "test_rows": 200,
+    "accuracy": 0.905,
+    "precision": 0.8627450980392157,
+    "recall": 0.946236559139785,
+    "f1": 0.9025641025641026,
+    "coefficients": {
+      "income": 0.246964309351326,
+      "credit_score": 0.21253886626956134
+    }
+  },
+  {
+    "name": "generalization",
+    "description": "Train on historical data, test on new data where the leak is gone.",
+    "features": [
+      "income",
+      "credit_score",
+      "leaky_feature"
+    ],
+    "train_rows": 800,
+    "test_rows": 400,
+    "accuracy": 0.755,
+    "precision": 0.7692307692307693,
+    "recall": 0.7389162561576355,
+    "f1": 0.7537688442211056,
+    "coefficients": {
+      "income": 0.20610578948757824,
+      "credit_score": 0.19302004705518538,
+      "leaky_feature": 4.808510688837557
+    }
+  }
+]
